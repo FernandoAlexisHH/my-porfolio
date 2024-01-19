@@ -1,0 +1,121 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Projects from "../components/Projects.astro"
+import ReactIcon from "../icons/React.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import HtmlIcon from "../icons/Html.astro";
+import CssIcon from "../icons/Css.astro";
+import TypescriptIcon from "../icons/Typescript.astro";
+import NodeJSIcon from "../icons/NodeJs.astro";
+import ExpressIcon from "../icons/Express.astro";
+import PostgreIcon from "../icons/PostgreSQL.astro";
+import AstroIcon from "../icons/Astroicon.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import SequelizeIcon from "../icons/Sequelize.astro";
+
+
+
+
+const TECNOLOGIAS = [
+   {
+    name: "ReactJS",
+    class: "bg-blue-900 text-white",
+	icon: ReactIcon
+   
+  },
+  {
+	name:"JavaScript",
+	class:"bg-yellow-600 text-white",
+	icon: JavaScript
+  },
+  {
+	name:"HTML",
+	class:"bg-red-800 text-white",
+	icon: HtmlIcon
+  },
+  {
+	name:"ExpressJS",
+	class:"bg-black-900 text-white",
+	icon: ExpressIcon
+  },
+  {
+	name:"CSS",
+	class:"bg-blue-700 text-white",
+	icon: CssIcon
+  },
+  {
+	name:"NodeJS",
+	class:"bg-green-700 text-white",
+	icon: NodeJSIcon
+  },
+  {
+	name:"PostgreSQL",
+	class:"bg-blue-800 text-white",
+	icon: PostgreIcon
+  },
+  {
+	name:"Tailwind",
+	class:"bg-blue-800 text-white",
+	icon: TailwindIcon
+  },
+  {
+	name:"Astro",
+	class:"bg-red-800 text-white",
+	icon: AstroIcon
+  },
+  {
+	name:"TypeScript",
+	class:"bg-blue-600 text-white",
+	icon: TypescriptIcon
+  },
+  {
+	name:"Sequelize",
+	class:"bg-white-900 text-white",
+	icon: SequelizeIcon
+  },
+
+]
+	// "ReactJS",
+	// "JavaScript",
+	// "HTML",
+	// "CSS",
+	// "TypeScript",
+	// "NodeJS",
+	// "Express",
+	// "PostgreSQL",
+	// "Astro"
+const PROJECTS = [
+	{
+		name:"Rick and Morty APP",
+		description:"Proyecto rick and morty con autenticacion y login",
+		tecnologias:["ReactJS","Express","Sequelize"]
+	},
+	{
+		name:"Blog",
+		description:"Proyecto con autenticacion con login crear post con borrado persistencia en BD",
+		tecnologias:["NextJS","Tailwind"]
+	}
+]
+---
+
+<Layout title="Mi pagina principal">
+<main class="mx-auto flex flex-col justify-center items-center gap-y-8">
+	<h1 class="text-3xl">Hola, soy <span class="text-orange-300">Fernando Hernández</span></h1>
+	<h2 class="text-2xl text-orange-300">Desarrollador Web Full-Stack</h2>
+	<p class="text-xl">Especializado En Crear Páginas Web con Tecnologías Base del Sector como son:</p>
+	<ul class="grid grid-cols-3 gap-2">	
+		{TECNOLOGIAS.map((tecnologia) =>(
+			<span class={`flex gap-2 items-center ${tecnologia.class} text-2xs font-medium me-2 px-3 py-3 rounded shadow`}><tecnologia.icon class="size-6" />{tecnologia.name}</span>	
+		))}
+	</ul>
+	<section class="flex flex-col gap-4">
+		<h1 class="text-3xl mb-4">Proyectos</h1>
+		{PROJECTS.map((project) => (			
+			<Projects project={project} />
+			
+		))}
+	</section>
+</main>
+</Layout>
+
+
