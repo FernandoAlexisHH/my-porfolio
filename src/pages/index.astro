@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import Projects from "../components/Projects.astro";
 import Experience from "../components/Experience.astro";
 import Contact from "../components/Contact.astro";
-import Tecnologias from "../components/Tecnologias.astro"
+import Tecnologias from "../components/Tecnologias.astro";
+import Footer from "../components/Footer.astro";
 
 import ProjectosIcon from "../icons/ProjectosIcon.astro";
 import TecnologiasIcon from "../icons/TecnologiasIcon.astro";
@@ -14,21 +15,21 @@ import ContactIcon from "../icons/ContactIcon.astro";
 const PROJECTS = [
 	{
 		name:"Rick and Morty APP",
-		description:"Proyecto rick and morty con autenticacion y login",
+		description:"Pagina con autenticacion y login, filtrado de personajes y busqueda, persistencia de datos en BD",
 		tecnologias:["ReactJS","Express","Sequelize"]
 	}
 ]
 ---
 
 <Layout title="Mi pagina principal">
-<main class="mx-auto flex flex-col justify-center items-center gap-y-8">
-	<h1 class="text-5xl">Hola, soy <span class="text-orange-300">Fernando Hernández</span></h1>
-	<h2 class="text-4xl text-orange-300">Desarrollador Web Full-Stack</h2>
-
-	<p class="text-xl max-w-[500px]">Especializado En Crear Páginas Web con Tecnologías Base del Sector como son:</p>
+<main class="mx-auto flex flex-col justify-center items-center gap-y-6">
+	<h1 class="text-5xl">Hola, soy <span class="text-red-400">Fernando Hernández</span></h1>
+	<h2 class="text-4xl text-red-400">Desarrollador Web Full-Stack</h2>
+	<span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-1 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">Disponible para trabajar</span>
+	<p class="text-xl max-w-[500px] text-pretty">Especializado En Crear Páginas Web. De México, Programador Autodidacto con +1 año de Experiencia en Proyectos Practicos</p>
 	
 	<section class="flex flex-col gap-4">
-		<div class="flex flex-row items-center justify-center mb-5">
+		<div class="flex flex-row items-center justify-start mb-5">
 			<span><ProjectosIcon class="size-10"/></span><h1 class="text-3xl ">Proyectos</h1>
 		</div>
 		{PROJECTS.map((project) => (			
@@ -37,7 +38,7 @@ const PROJECTS = [
 		))}
 	</section>
 
-	<section class="flex flex-col items-center">
+	<section class="flex flex-col items-start">
 		<h1 class="text-3xl mb-5"><ExperienceIcon class="size-10 inline-block mb-3" />Experiencia</h1>
 		<Experience/>
 	</section>
@@ -52,7 +53,9 @@ const PROJECTS = [
 		<Contact class="w-[800px]" />
 	</section>
 
+
 </main>
+<Footer/>
 </Layout>
 
 

@@ -1,14 +1,21 @@
-
-<header class="sticky top-0 left-0 flex justify-center items-center mx-auto mb-8 z-10">
+---
+import GithubIcon from "../icons/GithubIcon.astro";
+import LinkedInIcon from "../icons/LinkedinIcon.astro"
+---
+<header class="sticky top-0 left-0 flex items-center justify-center  mb-8 z-10 gap-4">
 <nav class=" border border-black rounded-full
 px-3 py-3 mt-2
-flex flex-row items-center
-bg-neutral-200 dark:bg-slate-400/50
+flex flex-row items-center justify-center
+bg-neutral-200 dark:bg-slate-700/50
 gap-12
 backdrop-blur-2xl">
-    <a class="hover:bg-white/30 rounded-full px-2  py-1" href="#experiencia">Experiencia</a>
-    <a class="hover:bg-white/30 rounded-full px-2  py-1" href="#proyectos">Proyectos</a>
-    <a class="hover:bg-white/30 rounded-full px-2  py-1" href="#sobre-mi">Sobre mí</a>
-    <a class="hover:bg-white/30 rounded-full px-2  py-1" href="#contacto">Contacto</a>
+    <a class="hover:bg-white/30 rounded-full px-2  py-1 hover:scale-110" href="#experiencia">Experiencia</a>
+    <a class="hover:bg-white/30 rounded-full px-2  py-1 hover:scale-110" href="#proyectos">Proyectos</a>
+    <a class="hover:bg-white/30 rounded-full px-2  py-1 hover:scale-110" href="#sobre-mi">Sobre mí</a>
+    <a class="hover:bg-white/30 rounded-full px-2  py-1 hover:scale-110" href="#contacto">Contacto</a>
 </nav>
+<div class="flex gap-3 p-2">
+<a href="https://github.com/FernandoAlexisHH" target="_blank" rel="noopener"><GithubIcon  class="size-10 hover:scale-110"/></a>
+<a href="https://www.linkedin.com/in/fernando-alexis-hern%C3%A1ndez-2a3a3b2a4/" target="_blank" rel="noopener"><LinkedInIcon class="size-10 hover:scale-110"></a>
+</div>
 </header>
