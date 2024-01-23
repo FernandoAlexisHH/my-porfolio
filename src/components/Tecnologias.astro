@@ -1,0 +1,79 @@
+---
+import ReactIcon from "../icons/React.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import HtmlIcon from "../icons/Html.astro";
+import CssIcon from "../icons/Css.astro";
+import TypescriptIcon from "../icons/Typescript.astro";
+import NodeJSIcon from "../icons/NodeJs.astro";
+import ExpressIcon from "../icons/Express.astro";
+import PostgreIcon from "../icons/PostgreSQL.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import TailwindIcon from "../icons/Tailwind.astro";
+import SequelizeIcon from "../icons/Sequelize.astro";
+
+const TECNOLOGIAS = [
+   {
+    name: "ReactJS",
+    class: "bg-blue-900 text-white",
+	icon: ReactIcon
+   
+  },
+  {
+	name:"JavaScript",
+	class:"bg-yellow-600 text-white",
+	icon: JavaScript
+  },
+  {
+	name:"HTML",
+	class:"bg-red-800 text-white",
+	icon: HtmlIcon
+  },
+  {
+	name:"ExpressJS",
+	class:"bg-black-900 text-white",
+	icon: ExpressIcon
+  },
+  {
+	name:"CSS",
+	class:"bg-blue-700 text-white",
+	icon: CssIcon
+  },
+  {
+	name:"NodeJS",
+	class:"bg-green-700 text-white",
+	icon: NodeJSIcon
+  },
+  {
+	name:"PostgreSQL",
+	class:"bg-blue-800 text-white",
+	icon: PostgreIcon
+  },
+  {
+	name:"Tailwind",
+	class:"bg-blue-800 text-white",
+	icon: TailwindIcon
+  },
+  {
+	name:"Astro",
+	class:"bg-red-800 text-white",
+	icon: AstroIcon
+  },
+  {
+	name:"TypeScript",
+	class:"bg-blue-600 text-white",
+	icon: TypescriptIcon
+  },
+  {
+	name:"Sequelize",
+	class:"bg-white-900 text-white",
+	icon: SequelizeIcon
+  },
+
+]
+---
+
+<ul class="grid grid-cols-3 gap-2">	
+    {TECNOLOGIAS.map((tecnologia) =>(
+        <span class={`flex gap-2 items-center ${tecnologia.class} text-2xs font-medium me-2 px-3 py-3 rounded`}><tecnologia.icon class="size-6 " />{tecnologia.name}</span>	
+    ))}
+</ul>
