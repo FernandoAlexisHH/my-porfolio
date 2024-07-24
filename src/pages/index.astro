@@ -6,11 +6,13 @@ import Experience from "../components/Experience.astro";
 import Contact from "../components/Contact.astro";
 import Tecnologias from "../components/Tecnologias.astro";
 import Footer from "../components/Footer.astro";
+import SobreMi from "../components/SobreMi.astro";
 
 import ProjectosIcon from "../icons/ProjectosIcon.astro";
 import TecnologiasIcon from "../icons/TecnologiasIcon.astro";
 import ExperienceIcon from "../icons/ExperienceIcon.astro";
 import ContactIcon from "../icons/ContactIcon.astro";
+import SobremiIcon from "../icons/SobremiIcon.astro";
 
 const PROJECTS = [
 	{
@@ -21,16 +23,18 @@ const PROJECTS = [
 ]
 ---
 
-<Layout title="Mi pagina principal">
-<main class="mx-auto flex flex-col justify-center items-center gap-y-6">
-	<h1 class="text-5xl">Hola, soy <span class="text-red-400">Fernando Hernández</span></h1>
-	<h2 class="text-4xl text-red-400">Desarrollador Web Full-Stack</h2>
+<Layout title="Porfolio Fernando Hernandez">
+<main class="mx-auto flex flex-col justify-center items-center gap-y-8 w-full mt-[60px]">
+	<h1 class="text-5xl animate-fade-down animate-delay-100">Hola 👋🏻 , soy <span class="text-purple-400">Fernando Hernández</span></h1>
+	<div class="flex items-center gap-x-4">
+	<h2 class="text-4xl text-purple-400">Desarrollador Web Full-Stack</h2>
 	<span class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-1 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400">Disponible para trabajar</span>
-	<p class="text-xl max-w-[500px] text-pretty">Especializado En Crear Páginas Web. De México, Programador Autodidacto con +1 año de Experiencia en Proyectos Practicos</p>
-	
-	<section class="flex flex-col gap-4">
-		<div class="flex flex-row items-center justify-start mb-5">
-			<span><ProjectosIcon class="size-10"/></span><h1 class="text-3xl ">Proyectos</h1>
+	</div>
+	<p class="text-xl max-w-[600px] text-pretty">Especializado En Crear Páginas Web Programador Autodidacta</p>
+	<section class="flex flex-col scroll-mt-[8ex]" id="proyectos" >
+		<div class="flex flex-row items-center justify-start mb-9 mt-9 w-[400px] gap-4">
+			<span><ProjectosIcon class="size-10"/></span>
+			<h1 class="text-3xl">Proyectos</h1>
 		</div>
 		{PROJECTS.map((project) => (			
 			<Projects project={project} />
@@ -38,24 +42,42 @@ const PROJECTS = [
 		))}
 	</section>
 
-	<section class="flex flex-col items-start">
-		<h1 class="text-3xl mb-5"><ExperienceIcon class="size-10 inline-block mb-3" />Experiencia</h1>
+	<section class="flex flex-col items-start scroll-mt-[8ex]" id="experiencia" >
+		<div class="flex flex-row items-center justify-start mb-9 mt-9 w-[400px] gap-4">
+		<span><ExperienceIcon class="size-10"/></span>
+		<h1 class="text-3xl">Experiencia</h1>
+		</div>
 		<Experience/>
 	</section>
 
-	<section class="flex flex-col mb-8 items-center">
-		<h1 class="text-3xl mb-6"><TecnologiasIcon class="size-10 inline-block mb-3" />Tecnologías</h1>
+	<section class="flex flex-col items-start scroll-mt-[8ex]" id="tecnologias">
+		<div class="flex flex-row items-center justify-start w-[400px] mb-9 mt-9 gap-4">
+		<span><TecnologiasIcon class="size-10" /></span>
+		<h1 class="text-3xl">Tecnologías</h1>
+		</div>
 		<Tecnologias />
 	</section>
 
-	<section class="mb-9 flex flex-col items-center">
-		<h1 class="text-3xl p-3 mb-6"><ContactIcon class="size-10 inline-block mb-3" />Contacto</h1>
-		<Contact class="w-[800px]" />
+	<section class="flex flex-col items-start scroll-mt-[8ex]" id="sobre-mi">
+		<div class="flex flex-row items-center justify-start w-[400px] mb-9 mt-9 gap-4">
+		<span><SobremiIcon class="size-10" /></span>
+		<h1 class="text-3xl">Sobre mí</h1>
+		</div>
+		<div class="w-[400px]">
+		<SobreMi />
+	</div>
+	</section>
+	
+	<section class="flex flex-col items-start scroll-mt-[8ex]" id="contacto">
+		<div class="flex flex-row items-center justify-start mb-9 mt-9 gap-4">
+		<span><ContactIcon class="size-10" /></span>
+		<h1 class="text-3xl">Contacto</h1>
+		</div>
+		<Contact  />
 	</section>
 
 
 </main>
 <Footer/>
 </Layout>
-
 

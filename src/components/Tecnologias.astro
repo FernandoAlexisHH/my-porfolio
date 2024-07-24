@@ -30,7 +30,7 @@ const TECNOLOGIAS = [
   },
   {
 	name:"ExpressJS",
-	class:"bg-black-900 text-white",
+	class:"dark:bg-black-900 text-white",
 	icon: ExpressIcon
   },
   {
@@ -65,7 +65,7 @@ const TECNOLOGIAS = [
   },
   {
 	name:"Sequelize",
-	class:"bg-white-900 text-white",
+	class:"dark:bg-dark-900 text-white",
 	icon: SequelizeIcon
   },
 
@@ -74,6 +74,6 @@ const TECNOLOGIAS = [
 
 <ul class="grid grid-cols-3 gap-2">	
     {TECNOLOGIAS.map((tecnologia) =>(
-        <span class={`flex gap-2 items-center ${tecnologia.class} text-2xs font-medium me-2 px-3 py-3 rounded`}><tecnologia.icon class="size-6 " />{tecnologia.name}</span>	
+        <span class={`flex gap-2 items-center ${tecnologia.class} text-2xs font-medium me-2 px-1 py-3 rounded hover:scale-105`}><tecnologia.icon class="size-6" />{tecnologia.name}</span>	
     ))}
 </ul>
